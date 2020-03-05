@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+:root {--cor-principal: blueviolet;}
+
 *{margin:0;padding:0;border:0}
 body{font-family: 'Roboto', sans-serif;background-color: #eeeeee;}
 
@@ -18,17 +20,3 @@ header{background-color: blueviolet;padding: 30px;}
 .tecnologias li {display: inline;margin: 0 15px;}
 
 .redes a {color: blueviolet;text-decoration: none;margin: 0 15px;}
-
-.cards {margin: 40px auto; width: 900px;max-width: 100%;text-align: center;display: grid;grid-template-columns: 1fr 1fr 1fr; gap: 20px;}
-.cards .card {background-color: rgb(38, 36, 41); border-radius: 20px;padding: 80px 50px}
-.cards .card img {max-width: 100%;}
-.cards .card .btmais {background-color: blueviolet;color: #fff;text-align: center;text-transform: uppercase;border-radius: 50px;padding: 10px 40px;display: inline-block;margin-top: 40px;cursor: pointer;}
-
-.modal-overlay {background-color: rgba(255,255,255,.8);position: fixed;top: 0;width: 100%;height: 100vh;opacity: 0;visibility: hidden;}
-.modal {background-color: #000; width: 400px;max-width: 90%;margin:25vh auto;height: 50vh;color:#fff; padding:40px; text-align:center;position: relative;}
-.modal .titulo {margin: 40px 0 20px 0; font-size: 30px;}
-.close-modal {position: absolute;top: 8px;right: 8px;cursor: pointer;}
-.full-modal {position: absolute;top: 8px;right: 32px;cursor: pointer;}
-
-.modal-overlay.active {opacity: 1;visibility: visible;}
-.modal.maximize {width: 800px;max-width: 90%;margin:5vh auto;height: 80vh;}
