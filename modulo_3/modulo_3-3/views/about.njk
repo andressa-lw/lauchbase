@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <title>Módulo 3 - Sobre</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="sobre">
+  <div class="logo">
+    <img src="{{about.avatar}}">
+  </div>
+  <h1>{{about.titulo}}</h1>
+
+  <div class="content">
+    <p>{{about.descricao}}</p>
+
+    <ul class="tecnologias">
+      {% for tecnologia in about.tecnologias %}
+      <li>{{tecnologia.nome}}</li>
+      {% endfor %}
+    </ul>
+
+    <nav class="redes"> 
+      {% for link in about.links %}
+      <a href="{{link.url}}">{{link.nome}}</a>
+      {% endfor %}
+    </nav> 
+  </div>
+</section>
+
+{% endblock %}
