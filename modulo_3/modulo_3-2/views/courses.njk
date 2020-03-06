@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Módulo 3 - Cursos</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="cards">
+  {% for item in items %}
+    <div class="card" id="{{item.id}}">
+      <img src="/img/{{item.id}}.svg" alt="">
+      <div class="info">
+          <span>{{item.modules}}</span>
+          <span class="price">{{item.price}}</span>
+      </div>
+      <a class="btmais">Ver mais</a>
+    </div>
+  {% endfor %}
+</section>
+
+<div class="modal-overlay">
+  <div class="modal">
+      <a class="close-modal"><i class="material-icons">close</i></a>
+      <a class="full-modal"><i class="material-icons">fullscreen</i></a>
+      <div class="modal-content">
+          <iframe src="" frameborder="0"></iframe>
+      </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+
+{% endblock %}
