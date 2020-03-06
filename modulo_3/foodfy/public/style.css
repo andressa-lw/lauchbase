@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{border: 0;padding: 0;margin: 0;box-sizing: border-box;}
+body{font-family: 'Roboto', sans-serif;color: #111111;}
+.container {width: 100%;max-width: 940px;margin:0 auto}
+
+header {padding: 30px 0;}
+header .container {display: grid;grid-template-columns: 30% 1fr;align-items: center;}
+header nav a {font-size: 16px;text-decoration: none;margin: 0 30px 0 0;color: #111111;}
+
+.banner {background: #FBDFDB; border-radius: 30px;padding: 0 60px;display: flex;justify-content: space-between;align-items: center;}
+.banner .box-texto {max-width: 320px;}
+.banner h1 {font-size: 32px;font-weight: 700;margin-bottom: 10px;}
+.banner p {opacity: 0.7;font-size: 18px;color: #000000;line-height: 28px;}
+.banner img {margin-top: 60px;}
+
+.receitas {padding: 20px 0 30px 0;}
+.receitas h2 {margin: 30px 0 20px 0;font-size: 24px;}
+.receitas .box {cursor: pointer;}
+.receitas .boxes {display: grid;grid-template-columns: 1fr 1fr 1fr;column-gap: 20px;row-gap: 30px;}
+.receitas .boxes img {width: 100%;border-radius: 15px;display: block;}
+.receitas .boxes h3 {font-size: 18px;margin: 20px 0 5px 0;font-weight: 400;}
+.receitas .boxes p {font-size: 14px;color: #777777;}
+.receitas a {text-decoration: none; color:#000}
+
+.texto-interno {padding: 20px 0 30px 0;}
+.texto-interno h1 {font-size: 24px; margin-bottom: 20px;} 
+.texto-interno p {font-size: 18px;color: #444444;line-height: 28px;margin-bottom: 30px;}
+.texto-interno h2 {font-size: 20px;margin-bottom: 20px;}
+
+.receita {min-height: 700px;}
+.receita img {border-radius: 15px;width: 100%;}
+.receita h3 {font-size: 36px;margin: 20px 0 5px 0;font-weight: 700; text-align: center;}
+.receita span {font-size: 20px;color: #777777;display: block;text-align: center;}
+.receita p, .receita li {font-size: 18px;color: #444444;line-height: 28px;}
+.receita ul {margin-left: 20px;}
+.receita h4 {font-size: 24px;color: #111111;font-weight: bold;margin: 50px 0 20px 0;}
+.receita small {font-size: 12px; color: #999999;text-transform: uppercase;cursor: pointer;}
+.receita .content {display: none;}
+.receita .content.active {display: block;}
+
+footer {background: #EEEEEE;padding: 23px;text-align: center;font-size: 14px;color: #999999;margin-top: 20px;}
