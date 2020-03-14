@@ -11,7 +11,7 @@
 <div class="card">
   <section class="avatar" style="background: url({{teacher.avatar_url}}) no-repeat center"></section>
   <section class="details">
-    <form method="POST" action="/teachers?_method=PUT">
+    <form id="form-update" method="POST" action="/teachers?_method=PUT">
       {% include "teachers/fields.njk" %}
       <input type="hidden" name="id" value="{{teacher.id}}">
     </form>
