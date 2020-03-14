@@ -34,6 +34,6 @@ input[type="radio"] {width: initial;margin-right: 4px;}
 input::placeholder {font-size: 16px;font-weight: normal;}
 button[type="submit"], .button {padding: 8px 32px;background-color: #57b363;color: #fff;border-radius: 4px;margin-top: 16px;width: 100%;cursor: pointer;}
 .button {text-decoration: none; display: block;text-align: center;}
-#form-update {width: 49%;}
+#form-update button {width: 49%;}
 #form-delete {width: 49%;margin: -39px 0 0 auto;}
 #form-delete button {background-color: lightcoral;margin-top: 8px;}
