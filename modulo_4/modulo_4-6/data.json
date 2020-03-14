@@ -1,0 +1,44 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Andressa Carla Benedette",
+      "birth": 661132800000,
+      "level": "dout",
+      "classtype": "À distância",
+      "area": "Matemática, Português, Inglês",
+      "created_at": 1583887713802
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Fulano",
+      "birth": 661132800000,
+      "level": "dout",
+      "classtype": "À distância",
+      "area": "Matemática, Português",
+      "created_at": 1583887713802
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Ciclano",
+      "birth": 661132800000,
+      "level": "dout",
+      "classtype": "À distância",
+      "area": "Matemática, Inglês",
+      "created_at": 1583887713802
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Zuleika",
+      "birth": 661132800000,
+      "level": "mest",
+      "classtype": "À distância",
+      "area": "Matemática",
+      "created_at": 1583887713802
+    }
+  ]
+}
