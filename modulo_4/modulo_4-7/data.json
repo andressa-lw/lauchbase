@@ -1,0 +1,54 @@
+{
+  "students": [
+    {
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Andressa Benedette",
+      "email": "and@sandbox.com.br",
+      "birth": 1533168000000,
+      "schoolyear": "fund5",
+      "horas": "234",
+      "id": 1
+    },
+    {
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "teste1234",
+      "email": "teste@teste.com.br",
+      "birth": 1435708800000,
+      "schoolyear": "med1",
+      "horas": "345",
+      "id": 2
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Andressa Carla Benedette",
+      "birth": 661132800000,
+      "level": "dout",
+      "classtype": "À distância",
+      "area": "Matemática, Português, Inglês",
+      "created_at": 1583887713802
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Fulano",
+      "birth": 661132800000,
+      "level": "dout",
+      "classtype": "À distância",
+      "area": "Matemática, Português",
+      "created_at": 1583887713802
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/8874679/600x600",
+      "name": "Zuleika",
+      "birth": 661132800000,
+      "level": "mest",
+      "classtype": "À distância",
+      "area": "Matemática",
+      "created_at": 1583887713802
+    }
+  ]
+}

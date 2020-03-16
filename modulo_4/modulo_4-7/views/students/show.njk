@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <title>Módulo 4 - Students</title>
+{% endblock %}
+
+{% block content %}
+
+<h3>Detalhes</h3>
+<div class="card">
+  <section class="avatar" style="background: url({{student.avatar_url}}) no-repeat center;"></section>
+  <section class="details">
+    <div class="item">
+      <div>Nome completo</div>
+      <div>{{student.name}}</div>
+    </div>
+    <div class="item">
+      <div>E-mail</div>
+      <div>{{student.email}}</div>
+    </div>
+    <div class="item">
+      <div>Aniversário</div>
+      <div>{{student.birth}}</div>
+    </div>
+    <div class="item">
+      <div>Ano escolar</div>
+      <div>
+        {% if student.schoolyear == "fund5" %}5º ano do ensino fundamental
+        {% elseif student.schoolyear == "fund6" %}6º ano do ensino fundamental
+        {% elseif student.schoolyear == "fund7" %}7º ano do ensino fundamental
+        {% elseif student.schoolyear == "fund8" %}Dou8º ano do ensino fundamentaltorado
+        {% elseif student.schoolyear == "med1" %}1º ano do ensino médio
+        {% elseif student.schoolyear == "med2" %}2º ano do ensino médio
+        {% elseif student.schoolyear == "med3" %}3º ano do ensino médio
+        {% endif %}
+      </div>
+    </div>
+    <div class="item">
+      <div>Carga horária semanal</div>
+      <div>{{student.horas}}</div>
+    </div>
+
+    <a href="/students/{{student.id}}/edit" class="button">Editar</a>
+  </section>
+</div>
+
+{% endblock %}

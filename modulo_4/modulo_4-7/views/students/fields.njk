@@ -1,0 +1,39 @@
+
+<div class="item">
+  <div>Avatar URL</div>
+  <div><input type="url" name="avatar_url" placeholder="http://" value="{{student.avatar_url}}"></div>
+</div>
+<div class="item">
+  <div>Nome completo</div>
+  <div><input type="text" name="name" placeholder="Nome completo" value="{{student.name}}"></div>
+</div>
+<div class="item">
+  <div>E-mail</div>
+  <div><input type="email" name="email" placeholder="email@email.com.br" value="{{student.email}}"></div>
+</div>
+<div class="item">
+  <div>Data de Nascimento</div>
+  <div><input type="date" name="birth" value="{{student.birth}}"></div>
+</div>
+<div class="item">
+  <div>Ano escolar</div>
+  <div>
+    <select name="schoolyear">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="fund5" {% if student.schoolyear == "fund5" %} selected {% endif %}>5º ano do ensino fundamental </option>
+      <option value="fund6" {% if student.schoolyear == "fund6" %} selected {% endif %}>6º ano do ensino fundamental </option>
+      <option value="fund7" {% if student.schoolyear == "fund7" %} selected {% endif %}>7º ano do ensino fundamental </option>
+      <option value="fund8" {% if student.schoolyear == "fund8" %} selected {% endif %}>8º ano do ensino fundamental </option>
+      <option value="med1" {% if student.schoolyear == "med1" %} selected {% endif %}>1º ano do ensino médio </option>
+      <option value="med2" {% if student.schoolyear == "med2" %} selected {% endif %}>2º ano do ensino médio</option>
+      <option value="med3" {% if student.schoolyear == "med3" %} selected {% endif %}>3º ano do ensino médio</option>
+    </select>
+  </div>
+</div>
+<div class="item">
+  <div>Carga horária semanal</div>
+  <div>
+    <input type="number" name="horas" value="{{student.horas}}"">
+  </div>
+</div>
+<button type="submit">Salvar</button>
