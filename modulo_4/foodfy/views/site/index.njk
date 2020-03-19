@@ -1,0 +1,34 @@
+{% extends "site/layout.njk" %} 
+
+{% block content %}
+
+<section class="banner container">
+  <div class="box-texto">
+    <h1>As melhores receitas</h1>
+    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+  </div>
+  <img src="/assets/chef.png">
+</section>
+
+<section class="receitas">
+  <div class="container">
+    <h2>Últimas receitas</h2>
+    <div class="boxes">
+
+     {% for recipe in recipes %}
+      {% if loop.index0 < 6 %}
+        <a href="/site/receita/{{recipe.id}}">
+          <div class="box" id="{{recipe.id}}">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+            <h3>{{recipe.title}}</h3>
+            <p>por {{recipe.author}}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
