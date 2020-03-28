@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {--cor-principal: rgb(65, 162, 201);}
+
+*{margin:0;padding:0;border:0;box-sizing: border-box;}
+body{font-family: 'Roboto', sans-serif;background-color: #eeeeee;font-size: 16px;}
+
+header{background-color: var(--cor-principal);padding: 30px;}
+.nav {list-style: none;text-align: center;}
+.nav li {display: inline;}
+.nav li + li {margin-left: 30px;}
+.nav li a {color: rgba(255, 255, 255, 0.8); text-decoration: none;position:relative;transition: color ease-in-out .3s;}
+.nav li a:hover, .nav li a.active {color: rgba(255, 255, 255, 1);}
+.nav li a::after {content:"";width: 0;height: 2px;background-color: rgba(255, 255, 255, 0.8);position: absolute;left: 0;bottom: -5px;transition: width ease-in-out .3s;}
+.nav li a:hover::after, .nav li a.active::after {width: 100%;transition: width ease-in-out .3s;}
+
+h3 {color: var(--cor-principal);text-align: center;font-weight: bold;font-size: 20px;margin-top: 45px;text-transform: uppercase;}
+.card {background-color: #fff;width: 800px;min-height: 400px;margin: 45px auto;display: grid;grid-template-columns: 40% 60%;box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.1);animation: up 500ms ease-out;}
+@keyframes up {
+  from {opacity: 0;transform: translateY(20px);}
+  to {opacity: 1;}
+}
+.card .avatar {background-size:cover !important;}
+
+.details {padding: 32px;}
+.details .item {border-top: 1px solid rgba(0,0,0,0.1);padding: 16px 0;}
+.details .item:first-child {border:0;}
+.details .item div:nth-child(1) {color: #777;font-size: 14px;line-height: 24px;letter-spacing: 0.7px;font-weight: normal;}
+.details .item div:nth-child(2) {color: #555;font-weight: bold;font-size: 16px;}
+.details .item span {padding: 8px 16px;background-color: var(--cor-principal);color: #fff;border-radius: 16px;margin:8px 4px 0 0; display: inline-flex;font-size: 11px;text-transform: uppercase;letter-spacing: 1px;}
+
+input, select {width: 100%;outline: none;color: #555;font-weight: bold;font-size: 16px;}
+input[type="radio"] {width: initial;margin-right: 4px;}
+input::placeholder {font-size: 16px;font-weight: normal;}
+button[type="submit"], .button {padding: 8px 32px;background-color: #57b363;color: #fff;border-radius: 4px;margin-top: 16px;width: 100%;cursor: pointer;}
+.button {text-decoration: none; display: block;text-align: center;}
+#form-update button {width: 49%;}
+#form-delete {width: 49%;margin: -39px 0 0 auto;}
+#form-delete button {background-color: lightcoral;margin-top: 8px;}
+
+.table-container {display: grid;grid-template: 64px 1fr 16px / 1fr;padding: 40px;}
+.table-container table {border-spacing: 0;}
+.table-container thead tr th, .table-container tbody tr td {text-align: center;}
+.table-container td, .table-container th {padding: 14px;border-bottom: 1px solid #d9d9d9;}
+.table-container th {text-transform: uppercase;color: #777;font-size: 14px;}
+.table-container tbody tr:last-child td {border: none;}
+.table-container tbody tr td:first-child {display: grid;grid-template-columns: 50px 1fr;align-items: center;}
+.table-container tbody tr td:first-child span {width: 40px;height: 40px;background-position: center;background-size: cover;border-radius: 50%;box-shadow: 3px 1px 6px -4px black;border: 2px solid white;}
+.table-container tbody tr td:last-child a, .table-container > a {background-color: var(--cor-principal);padding: 8px 16px;text-decoration: none;text-transform: uppercase;color: white;font-size: 12px;border-radius: 4px;}
+.table-container tbody tr td:nth-child(2) span {padding: 4px 12px;background-color: var(--cor-principal);color: #fff;border-radius: 16px;margin:8px 4px 0 0; display: inline-flex;font-size: 11px;text-transform: uppercase;letter-spacing: 1px;}
+.table-container > a {margin-bottom: 22px;display: inline-block;}
+
+.table-container .header {display: grid;grid-template-columns: 1fr 1fr;align-items: center;align-self: start;}
+.table-container .header .button {margin:0; width: 120px;}
+.table-container .header button[type="submit"] {margin:0}
+.table-container .header form {display: grid;grid-template-columns: 1fr 120px;align-items: center;grid-gap: 8px;}
+.table-container .header form input {border: 1px solid #eee; padding: 4px 8px;}
+
+.table-container .pagination {margin: 0;align-self: end;justify-self: center;}
+.pagination a, .pagination span {color: var(--cor-principal);text-decoration: none; margin-right: 16px;transition: all ease .3s;}
+.pagination a:hover {filter: brightness(0.7); border-bottom: 1px solid var(--cor-principal);transition: all ease .3s;}

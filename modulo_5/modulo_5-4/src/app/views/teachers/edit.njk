@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <title>Módulo 4 - Teachers</title>
+{% endblock %}
+
+{% block content %}
+
+<h3>Editar Professor</h3>
+
+<div class="card">
+  <section class="avatar" style="background: url({{teacher.avatar_url}}) no-repeat center"></section>
+  <section class="details">
+    <form id="form-update" method="POST" action="/teachers?_method=PUT">
+      {% include "teachers/fields.njk" %}
+      <input type="hidden" name="id" value="{{teacher.id}}">
+    </form>
+
+    <form id="form-delete" method="post" action="/teachers?_method=DELETE">
+      <input type="hidden" name="id" value="{{teacher.id}}">
+      <button type="submit">Deletar</button>
+    </form>    
+  </section>
+</div>
+
+{% include "teachers/confirm.njk" %}
+
+{% endblock %}

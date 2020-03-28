@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <title>Módulo 4 - Students</title>
+{% endblock %}
+
+{% block content %}
+
+<h3>Estudante</h3>
+<div class="card table-container">
+  <div class="header">
+    <a class="button" href="/students/create">Novo</a>
+
+    <form action="/students" method="GET">
+      <input type="text" name="filter" placeholder="Nome ou E-mail" value="{{filter}}">
+      <button type="submit">Filtrar</button>
+    </form>
+  </div>
+  <table width="100%"">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Ano Escolar</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for student in students %}
+      <tr>
+        <td><span style="background-image: url({{student.avatar_url}})"></span>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>
+          {% if student.schoolyear == "fund5" %}5º ano do ensino fundamental
+          {% elseif student.schoolyear == "fund6" %}6º ano do ensino fundamental
+          {% elseif student.schoolyear == "fund7" %}7º ano do ensino fundamental
+          {% elseif student.schoolyear == "fund8" %}Dou8º ano do ensino fundamentaltorado
+          {% elseif student.schoolyear == "med1" %}1º ano do ensino médio
+          {% elseif student.schoolyear == "med2" %}2º ano do ensino médio
+          {% elseif student.schoolyear == "med3" %}3º ano do ensino médio
+          {% endif %}
+        </td>
+        <td><a href="/students/{{student.id}}">Ver</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="pagination" data-page={{pagination.page}} data-total={{pagination.total}} data-filter={{filter}}></div>
+</div>
+
+{% endblock %}
