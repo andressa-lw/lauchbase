@@ -1,0 +1,17 @@
+{% extends "admin/layout.njk" %}
+
+{% block header %}
+  <title>Módulo 4 - Student</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="/admin/recipes">
+  <div class="topo">
+    <h3>Criando receita </h3>
+    <button type="submit">Salvar receita</button>
+  </div>
+  {% include "admin/recipes/fields.njk" %}
+</form>
+
+{% endblock %}

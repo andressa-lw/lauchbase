@@ -1,0 +1,30 @@
+{% extends "site/layout.njk" %}
+
+{% block header %}
+  <title>FoodFy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="receitas">
+  <div class="container">
+    <h2>Buscado por: {{filter}}</h2>
+    <div class="boxes">
+
+      {% for item in recipes %}
+      <a href="/site/receita/{{item.id}}">
+        <div class="box" id="{{item.id}}">
+          <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+          <h3>{{item.title}}</h3>
+          <p>por {{item.chef_name}}</p>
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+    <div class="pagination" data-page="{{pagination.page}}" data-total="{{pagination.total}}" data-filter="{{filter}}"></div>
+
+  </div>
+</section>
+
+{% endblock %}

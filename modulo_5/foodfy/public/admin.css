@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{border: 0;padding: 0;margin: 0;box-sizing: border-box;}
+body{font-family: 'Roboto', sans-serif;color: #111111;font-size: 16px;}
+.container {width: 100%;max-width: 940px;margin:0 auto}
+
+header {padding: 27px 0;background-color: #111;}
+header .container {display: grid;grid-template-columns: 30% 1fr;align-items: center;}
+header nav a {font-size: 16px;text-decoration: none;margin: 0 30px 0 0;color: rgba(255, 255, 255, 0.5); text-transform: uppercase;transition: all ease .3s;}
+header nav a:hover, header nav a.active {color: rgba(255, 255, 255, 1);}
+
+.conteudo {margin: 50px 0;}
+.conteudo h3 {font-weight: 700;font-size: 24px;}
+
+.topo {display: flex;align-items: center;justify-content: space-between;margin-bottom: 30px;}
+.topo a, .topo button {background: #6558C3;border-radius: 4px;border-radius: 4px;color: #fff;text-decoration: none;padding:9px 20px;cursor: pointer;font-size: 16px;}
+
+.grid-receitas {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
+.grid-receitas .box {display: grid;grid-template-columns: 172px 1fr;gap: 20px;}
+.grid-receitas img {max-width: 100%;border-radius: 9px;height: 80px;object-fit: cover;}
+.grid-receitas h3 {font-size: 18px;font-weight: normal;margin-bottom: 5px;}
+.grid-receitas p {font-size: 14px; color: #777777;margin-bottom: 10px;}
+.grid-receitas a {font-size: 14px;color: #6558C3;text-decoration: none;font-weight: bold;transition: all ease .3s;}
+.grid-receitas a:hover {color: #111;transition: all ease .3s;}
+
+form .item > div:first-child {font-weight: 700;margin: 30px 0 10px 0;}
+form input, form textarea, form select {background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 4px;border-radius: 4px;width: 100%;padding: 12px 16px;}
+form .ingredient, form .preparation {margin-bottom: 5px;}
+form .add-ingredient, form .add-preparation {color: #6558C3;border: 0;background-color: transparent;font-weight: 700;font-size: 16px;}
+form .delete {background-color: #DC4747;margin-right: 5px;}
+
+.receita {min-height: 700px;}
+.receita img {border-radius: 15px;width: 100%;}
+.receita h3 {font-size: 36px;margin: 20px 0 5px 0;font-weight: 700; text-align: center;}
+.receita span {font-size: 20px;color: #777777;display: block;text-align: center;}
+.receita p, .receita li {font-size: 18px;color: #444444;line-height: 28px;}
+.receita ul {margin-left: 20px;}
+.receita h4 {font-size: 24px;color: #111111;font-weight: bold;margin: 50px 0 20px 0;}
+
+.chef {text-align: center;}
+.chef img {max-width: 100%;border-radius: 50%;height: 200px;width:200px;object-fit: cover;}
+.chef h3 {font-size: 36px;margin: 20px 0 5px 0;font-weight: 700; text-align: center;}
+.chef span {font-size: 20px;color: #777777;display: block;text-align: center;}
+
+.grid-chefs {display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;gap: 20px;}
+.grid-chefs .box {display: grid;grid-template-columns: 64px 1fr;gap: 20px;align-items: center;}
+.grid-chefs img {max-width: 100%;border-radius: 50%;height: 64px;object-fit: cover;}
+.grid-chefs h3 {font-size: 18px;font-weight: normal;margin-bottom: 5px;}
+.grid-chefs a {font-size: 14px;color: #6558C3;text-decoration: none;font-weight: bold;transition: all ease .3s;}
+.grid-chefs a:hover {color: #111;transition: all ease .3s;}

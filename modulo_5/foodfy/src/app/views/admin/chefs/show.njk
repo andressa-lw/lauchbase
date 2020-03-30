@@ -1,0 +1,33 @@
+{% extends "admin/layout.njk" %}
+
+{% block header %}
+  <title>Admin Foodfy</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="topo">
+  <h3>Chef: {{chef.name}}</h3>
+  <a href="/admin/chefs/{{chef.id}}/edit">Editar chef</a>
+</div>
+
+<div class="chef">
+  <img src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
+  <h3>{{chef.name}}</h3>
+  <span>{{chef.total_recipes}} receitas</span>
+</div>
+
+<div class="grid-receitas">
+  {% for chef in chefs %}
+    <div class="box" id="{{chef.id}}">
+      <img src="{{chef.image}}" alt="Imagem de {{chef.title}}">
+      <div>
+        <h3>{{chef.title}}</h3>
+        <p>por {{chef.author}}</p>
+        <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

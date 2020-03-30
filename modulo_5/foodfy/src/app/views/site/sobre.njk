@@ -1,0 +1,25 @@
+{% extends "site/layout.njk" %}
+
+{% block header %}
+  <title>FoodFy - Sobre</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="texto-interno">
+  <div class="container">
+    <h1>{{sobre.titulo}}</h1>
+    <p>{{sobre.conteudo1}}</p>
+    <p>{{sobre.conteudo2}}</p>
+    </p>
+
+    <h2>{{sobre.subtitulo1}}</h2>
+    <p>{{sobre.conteudo1}}</p>
+    <p>{{sobre.conteudo2}}</p>
+
+    <h2>{{sobre.subtitulo2}}</h2>
+    <p>{{sobre.conteudo2}}</p>
+  </div>
+</section>
+
+{% endblock %}

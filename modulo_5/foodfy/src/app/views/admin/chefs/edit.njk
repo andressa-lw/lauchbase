@@ -1,0 +1,27 @@
+{% extends "admin/layout.njk" %}
+
+{% block header %}
+  <title>Módulo 4 - Teachers</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" id="form-send" action="/admin/chefs?_method=PUT">
+  <div class="topo">
+    <h3>Editando chef </h3>
+    <div>
+      <button type="submit" form="form-delete" class="delete">Deletar</button>
+      <button type="submit" form="form-send">Salvar chef</button>
+    </div>
+  </div>
+  <input type="hidden" name="id" value="{{chef.id}}">
+  {% include "admin/chefs/fields.njk" %}
+</form>
+
+<form id="form-delete" method="POST" action="/admin/chefs?_method=DELETE">
+  <input type="hidden" name="id" value="{{chef.id}}">
+</form>
+
+{% include "admin/chefs/confirm.njk" %}
+
+{% endblock %}
